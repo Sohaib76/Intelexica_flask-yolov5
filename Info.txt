@@ -1,0 +1,16 @@
+#Detect Image
+python detect.py --source data/images --weights yolov5s.pt --conf 0.25
+
+#Convet pt to onnx
+set PYTHONPATH="$PWD" && python models/export.py --weights yolov5s.pt --img 640 --batch 1
+
+#Convert pt to tflite
+python tf.py --weights weights/yolov5s.pt --cfg models/yolov5s.yaml --img 640
+
+
+
+Used Repo
+https://github.com/zldrobit/yolov5/branches
+https://github.com/roytuts/flask/tree/master/python-flask-upload-display-image
+Main Repo
+https://github.com/ultralytics/yolov5

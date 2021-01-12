@@ -1,0 +1,23 @@
+Weights Conversion
+https://github.com/SoloSynth1/tensorflow-yolov4
+https://stackoverflow.com/questions/53182177/how-do-you-convert-a-onnx-to-tflite
+https://github.com/zldrobit/onnx_tflite_yolov3.git
+https://github.com/ultralytics/yolov5/pull/959
+
+pip install  onnx-tf==1.5.0, onnx
+Pytorch (pt) To ONNX
+set PYTHONPATH="$PWD" && python models/export.py --weights yolov5s.pt --img 640 --batch 1
+ONNX to Tensorflow (pb)
+onnx-tf convert -i "yolov5s.onnx" -o  "yolov5s.pb"
+Tensorflow to TFlite (Not Working yet)
+tflite_convert --output_file=yolov5s.tflite
+--input_arrays=input --output_arrays=output --saved_model_dir=yolov5s.pb
+OR 
+Script zconverterScript.py
+OR
+tflite_convert = --saved_model_dir=yolov5s.pb/saved_model.pb --output_file=model.tflite
+----------------------------
+
+
+S3 bucket:
+https://gist.github.com/ColtonProvias/5079405
