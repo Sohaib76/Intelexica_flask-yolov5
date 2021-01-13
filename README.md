@@ -11,12 +11,14 @@ Currently Weights used are yolov5
 
 
 IMAGE DETECTION:
+
 #Detect Image:
 python detect.py --source data/images --weights yolov5s.pt --conf 0.25
 
 
 WEIGHTS CONVERSION:
-#Convet pt to onnx:
+
+**Convert pt to onnx:
 set PYTHONPATH="$PWD" && python models/export.py --weights yolov5s.pt --img 640 --batch 1
 
 #Convert pt to tflite:
