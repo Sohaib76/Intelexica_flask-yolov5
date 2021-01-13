@@ -9,11 +9,13 @@ There will be a upload button . You will upload a Picture and then it will proce
 Currently Weights used are yolov5
 
 
-For only Converting the weights or detecting image.
 
+IMAGE DETECTION:
 #Detect Image:
 python detect.py --source data/images --weights yolov5s.pt --conf 0.25
 
+
+WEIGHTS CONVERSION:
 #Convet pt to onnx:
 set PYTHONPATH="$PWD" && python models/export.py --weights yolov5s.pt --img 640 --batch 1
 
@@ -21,5 +23,6 @@ set PYTHONPATH="$PWD" && python models/export.py --weights yolov5s.pt --img 640 
 python tf.py --weights weights/yolov5s.pt --cfg models/yolov5s.yaml --img 640
 
 
-Weights: https://drive.google.com/drive/folders/1jaRtyjd_IFec9i86bi4ZMPXWWrTK-8kD?usp=sharing
+Weights: https://drive.google.com/drive/folders/1jaRtyjd_IFec9i86bi4ZMPXWWrTK-8kD?usp=sharing (xmr..)
+
 #Place them at weights/...
