@@ -19,3 +19,6 @@ set PYTHONPATH="$PWD" && python models/export.py --weights yolov5s.pt --img 640 
 
 #Convert pt to tflite:
 python tf.py --weights weights/yolov5s.pt --cfg models/yolov5s.yaml --img 640
+
+
+Weights: https://drive.google.com/drive/folders/1jaRtyjd_IFec9i86bi4ZMPXWWrTK-8kD?usp=sharing
